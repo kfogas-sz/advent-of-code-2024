@@ -25,11 +25,13 @@ def is_safe(numbers: list[int]) -> bool:
             return False
     return True
 
+
 def is_safe_dampened(numbers: list[int]) -> bool:
     for count, _ in enumerate(numbers):
         if is_safe(numbers[:count] + numbers[count+1:]):
             return True
     return False
+
 
 def main():
     with open(r"day2\input") as f:
@@ -42,7 +44,7 @@ def main():
         if is_safe(numbers):
             count += 1
     print(count)
-    
+
     # Second part:
     count = 0
     for line in lines:
