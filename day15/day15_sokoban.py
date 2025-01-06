@@ -98,9 +98,9 @@ def calculate_location(box_loc):
 if __name__ == "__main__":
     count = 0
     with open(r"day15\input") as f:
-        map, movements = f.read().split("\n\n")
+        init_map, movements = f.read().split("\n\n")
 
-    robot_map = map.splitlines()
+    robot_map = init_map.splitlines()
     robot_map = [list(line) for line in robot_map]
     robot_map = [[item for item in row] for row in robot_map]
 
